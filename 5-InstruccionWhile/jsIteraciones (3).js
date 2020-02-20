@@ -1,25 +1,32 @@
 function mostrar()
 {
 
-var clave = prompt("ingrese el número clave.", "utn750");
+var clave = prompt("ingrese el número clave.");
 var contador=0
 
 //while si clave!= utn750 volver a intentar
 
-    while(clave.toLowerCase!="unt750" && contador<3) {
+    while(clave.toLowerCase()!="utn750" ) {
+
+   
         contador++
 
-        
-        clave = prompt("ERROR!!!! ingrese el número clave.");
+         if(contador == 3) {
+             break;
+             }
 
+           clave = prompt("ERROR!!!! ingrese el número clave.");
+        
+    }
+
+    if (contador == 3){
+        alert ("Número máximo de intentos.");
+    } else {
+        alert("CLAVE CORRECTA");
         console.log(clave);
     } 
 
-    if(contador==3) {
-        alert ("Número máximo de intentos.")
-    } else {
-        alert("CLAVE CORRECTA");
-    }
+
 
 
 }//FIN DE LA FUNCIÓN

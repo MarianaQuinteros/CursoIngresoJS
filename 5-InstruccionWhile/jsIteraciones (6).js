@@ -7,28 +7,28 @@ function mostrar()
 
 	//ingreso primer numero
 	
-	
-
-	while(contador<=4)  {
+		while(contador<=4)  {
 
 		contador++;
 		numeros= prompt("INGRESE UN NÙMERO");
 		
+
+		console.log(numeros);
+
 		//validar
 		numeros=parseInt(numeros);
 
 		while (isNaN(numeros)) {
-			numero=prompt("ingrese numero valido");
-			numero=parseInt(numero);
+			numeros=prompt("ingrese numero valido");
+			numeros=parseInt(numeros);
+
 		}
 		//acumulamos
 
 		acumulador+=numeros;
 		
-
 	}
 	
-
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;
 
