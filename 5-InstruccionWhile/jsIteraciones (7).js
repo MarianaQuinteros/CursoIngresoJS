@@ -5,11 +5,15 @@ function mostrar()
 	var acumulador=0;
 	var respuesta='si';
 	var numeros=0
+	var iterador
+
+	iterador= prompt("cuantos numeros quiere ingresar?")
+
 	//ingreso primer numero
 	
 	
 
-	while(contador!=respuesta.toLowerCase())  {
+	while(contador< iterador)  {
 
 		contador++;
 		numeros= prompt("INGRESE UN NÙMERO");
@@ -17,7 +21,7 @@ function mostrar()
 		//validar
 		numeros=parseInt(numeros);
 
-		while (isNaN(numeros) && contador!=respuesta.toLowerCase()) {
+		while (isNaN(numeros)) {
 			numero=prompt("ingrese numero valido");
 			numero=parseInt(numero);
 		}
