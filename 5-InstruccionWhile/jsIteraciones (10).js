@@ -5,13 +5,13 @@ function mostrar()
 	var respuesta=true;
 	var positivos
 	var negativos
-	var ceros
-	var acumuladorN
-	var acumuladorP
-	var contadorP
-	var contadorN
-	var contadorceros
-	var contadorpares
+	var ceros = 0
+	var acumuladorN = 0
+	var acumuladorP = 0
+	var contadorP = 0
+	var contadorN = 0
+	var contadorceros = 0
+	var contadorpares = 0
 	var promediop
 	var promedioN
 	var difertenciaentrePyN
@@ -52,7 +52,7 @@ function mostrar()
 				//punto 4
 				contadorN++
 			} else {
-				if 
+				contadorceros++
 			}
 		}
 		//punto 6
@@ -80,6 +80,8 @@ function mostrar()
 }
 
 document.write("La suma de los Negativos es: "+ acumuladorN+ "<br>");
-document.write
+document.write("La suma de los Numeros Positivos es:"+acumuladorP+"<br>");
+document.write("Hay "+contadorP+" Numeros Positivos"+"<br>");
+document.write("Hay"+ contadorN+"Numeros Negativos"+"<br>");
 
 }	//FIN DE LA FUNCIÓN
