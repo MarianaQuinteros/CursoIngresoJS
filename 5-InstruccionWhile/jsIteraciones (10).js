@@ -19,20 +19,14 @@ function mostrar()
 	//declarar contadores y variables 
 	
 	while (respuesta) {
-		var numero = prompt("Ingrese un número");
-		numero = parseInt(numero);
-
-		while(isNaN(numero)){
-		numero=prompt("ERROR, ingrese un numero valido");
-		numero = parseInt (numero)
-
+				
 		do{
 			numero=prompt("ERROR, ingrese un numero valido");
 		numero = parseInt (numero);
-		}while (isNaN(numero)){
+		}while (isNaN(numero))
 
 
-		}
+		
 
 		//CALCULOS	
 		//positivos
@@ -73,15 +67,14 @@ function mostrar()
 
 	
 	}
-
-
-
-
-}
+	respuesta=confirm("Desea continuar?");
+	
 
 document.write("La suma de los Negativos es: "+ acumuladorN+ "<br>");
 document.write("La suma de los Numeros Positivos es:"+acumuladorP+"<br>");
 document.write("Hay "+contadorP+" Numeros Positivos"+"<br>");
 document.write("Hay"+ contadorN+"Numeros Negativos"+"<br>");
+
+
 
 }	//FIN DE LA FUNCIÓN
