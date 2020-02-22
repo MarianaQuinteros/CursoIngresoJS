@@ -12,3 +12,22 @@ function mostrar()
 	
 
 }//FIN DE LA FUNCIÓN
+
+
+
+
+
+
+
+
+
+
+/*
+var contador = 0
+
+while (contador<10) {
+	contador++
+	alert (contador)
+	
+}
+*/
