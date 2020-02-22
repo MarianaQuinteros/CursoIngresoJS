@@ -120,9 +120,9 @@ document.getElementById('minimo').value=minimo;
 
 
 
-*/
+
 	
 	
 
 
-}//FIN DE LA FUNCIÓN
+//FIN DE LA FUNCIÓN
