@@ -13,16 +13,18 @@ c) La cantidad de varones que su nota haya sido mayor o igual a 6.
     var notas=0;
     var sexo;
     var promedio;
-    var notamasbaja=0;
+    var notamasbaja = 0;
     var contadorvaroles=0;
     var alumnos=0;
-    var acumulador=0
+    var acumulador=0;
     var sexonotabaja;
+    var notamin=0;
+    
     
 
-    while (alumnos<5) {
+    while (alumnos<2) {
 
-        alumnos++;
+       
 
         do {
             notas = prompt("INGRESE UNA NOTA");
@@ -41,17 +43,14 @@ c) La cantidad de varones que su nota haya sido mayor o igual a 6.
 
         //punto a
         acumulador+=notas;
-       
-
+     
         //punto b
-        if (contador == 1) {
+
+        notamin = notas;
+
+        if (notamin < notas ) {
             notamasbaja= notas;
             
-        } else {
-            if (nota< notamasbaja) {
-                notamasbaja=nota
-                sexonotabaja= sexo
-            }
         }
 
         //punto c
@@ -61,13 +60,19 @@ c) La cantidad de varones que su nota haya sido mayor o igual a 6.
 
         }
 
+        alumnos++;
     }
     
-
+    //punto a
     promedio= acumulador/alumnos;
-    alert (promedio);
+    alert ("El promedio de las notas es: "+promedio);
+    
+    //punto b
+    
+    alert ("La nota baja es: "+ notamasbaja+ " y fue de: "+ sexonotabaja);
 
-    alert ("")
+    //punto c
+    alert ("La cantidad de varones que su nota haya sido mayor o igual a 6 es: "+ contadorvaroles)
 
 
 

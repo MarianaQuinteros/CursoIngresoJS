@@ -19,7 +19,7 @@ Testeo con los siguientes datos
 ( g , 20) 
 ( a , 150(mal) , 0(bien)) 
 ( b , 3) 
-( k , 7) */
+( k , 7) */     
 
     var respuesta;
     var numero;
