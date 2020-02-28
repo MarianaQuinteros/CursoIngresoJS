@@ -12,13 +12,17 @@ f) El peso máximo y el mínimo.*/
 
 
     var respuesta = true;
+
+    //tomar datos
     var peso;
     var temperatura;
     var marca;
+    
+    //resolver el ejercicio
     var temperaturapar=0;
     var maximopeso;
     var maximomarca;
-    var primerpeso=true
+    var primerpeso=true 
     var minimopeso;
     var productoscongelados=0;
     var acumuladorpeso=0;
@@ -29,25 +33,31 @@ f) El peso máximo y el mínimo.*/
     while(respuesta) {
 
         do {
+            marca = prompt("INGRESE MARCA");
+
+        }while (marca == "");
+        
+        do {
             peso = prompt("INGRESE PESO ENTRE 0 Y 100");
             peso = parseInt(peso);
             
-        }while (isNaN(peso) || peso>101);
+        }while (isNaN(peso) || peso > 101 || peso < 0);
 
         do {
             temperatura = prompt("INGRESE LA TEMPERATURA DE ALMACENAMIENTO (ENTRE -30 Y 30)");
             temperatura = parseInt(temperatura);
 
-        }while (isNaN(temperatura) || temperatura > 30 || temperatura < -30);
+        }while (isNaN(temperatura) || temperatura > 31 || temperatura < -31);
 
-        do {
-            marca = prompt("INGRESE MARCA");
-
-        }while (!isNaN(marca));
+        
 
         //La cantidad de temperaturas pares.
         if (temperatura % 2 == 0) {
-            temperaturapar++
+            temperaturapar++;
+        } else {
+            if (temperatura == 0) {
+                temperaturapar++
+            }
         }
 
         //La marca del producto más pesado
@@ -55,40 +65,48 @@ f) El peso máximo y el mínimo.*/
             primerpeso = false;
             maximopeso = peso;
             maximomarca= marca;
-            minimopeso=peso
+            minimopeso=peso;
         }else {
             //El peso máximo y el mínimo.
-            if (maximopeso>peso) {
-                peso = maximopeso;
-                marca = maximomarca;
-            } 
-            if (minimopeso<peso) {
-                minimopeso = peso;
+            if (maximopeso<peso) {
+                maximopeso = peso;
+                maximomarca = marca;
+            } else {
+        
+                 if (minimopeso<peso) {
+                    minimopeso = peso;
+                }
             }
         }
 
         //La cantidad de productos que se conservan a menos de 0 grados. 
         if (temperatura<0) {
-            productoscongelados++
+            productoscongelados++;
 
         }
         //El promedio del peso de todos los productos.
         acumuladorpeso += peso;
-        contador++
+        contador++;
 
-        if (contador!=0) {
-            promediopeso= acumuladorpeso/contador;
-        }
-
+      
         
         respuesta=confirm("DESEA CONTINUAR?");
     }
 
-    alert ("La cantidad de temperaturas pares es: "+ temperaturapar);
-    alert ("La marca del producto más pesado es: "+maximomarca);
-    alert ("La cantidad de productos que se conservan a menos de 0 grados es:"+ productoscongelados);
-    alert ("El promedio del peso de todos los productos es: "+ promediopeso);
 
+    //PROMEDIO VA AFUERA DEL WHILE
+    if (contador>0) {
+        promediopeso= acumuladorpeso/contador;
+    }else {
+        promedio= 0 //cuando no ingresa ningun dato
+    }
+
+
+    document.write ("La cantidad de temperaturas pares es: "+ temperaturapar+"<br>");
+    document.write ("La marca del producto más pesado es: "+maximomarca+"<br>");
+    document.write ("La cantidad de productos que se conservan a menos de 0 grados es:"+ productoscongelados+"<br>");
+    document.write ("El promedio del peso de todos los productos es: "+ promediopeso+"<br>");
+    document.write  ("Peso Maximo: "+maximopeso+ "<br>"+"Peso minimo: " + minimopeso)
 
 
 
