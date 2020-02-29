@@ -59,7 +59,7 @@ f) El promedio de notas por sexo masculino y femenino
 
          //a) La cantidad de varones aprobados
 
-        if (sexo == "M" && notafinal>6){
+        if (sexo == "m" && notafinal>6){
              varonesaprobados++
          }
 
@@ -72,7 +72,7 @@ f) El promedio de notas por sexo masculino y femenino
              if (edad>=18) {
              //d) El promedio de notas de los mayores
              acumuladornotasmayores+=notafinal;
-             cantmasc++;
+             cantmayores++;
             } else {
                 //c) El promedio de notas de los adolescentes.
                 acumuladornotasadolescentes+=notafinal;
